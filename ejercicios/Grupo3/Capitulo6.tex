@@ -1,0 +1,60 @@
+\chapter*{Capitulo 6 ABD Grupo 3}
+\section*{Ejercicio 16}
+
+Dada la curva \( 27x - y^3 = 0 \) entre \( y = 0 \) y \( y = 2 \), queremos encontrar la superficie generada en tres casos distintos.
+
+\subsection*{Parte (a): Revolución alrededor del eje \( x \)}
+
+La fórmula general para la superficie de revolución alrededor del eje \( x \) es:
+\[
+S = \int 2\pi y \sqrt{1 + \left( \frac{dx}{dy} \right)^2} \, dy.
+\]
+
+De la ecuación de la curva, despejamos \( x \):
+\[
+x = \frac{y^3}{27}.
+\]
+
+Derivamos \( x \) respecto a \( y \):
+\[
+\frac{dx}{dy} = \frac{3y^2}{27} = \frac{y^2}{9}.
+\]
+
+Sustituimos en la fórmula de \( S \):
+\[
+S = \int_{0}^{2} 2\pi y \sqrt{1 + \left( \frac{y^2}{9} \right)^2} \, dy.
+\]
+
+\subsection*{Parte (b): Revolución alrededor del eje \( y \)}
+
+La fórmula general para la superficie de revolución alrededor del eje \( y \) es:
+\[
+S = \int 2\pi x \sqrt{1 + \left( \frac{dy}{dx} \right)^2} \, dx.
+\]
+
+De la ecuación de la curva, despejamos \( y \):
+\[
+y = (27x)^{1/3}.
+\]
+
+Derivamos \( y \) respecto a \( x \):
+\[
+\frac{dy}{dx} = \frac{1}{3} (27x)^{-2/3} \cdot 27 = 9x^{-2/3}.
+\]
+
+Sustituimos en la fórmula de \( S \):
+\[
+S = \int_{0}^{8/27} 2\pi x \sqrt{1 + \left( 9x^{-2/3} \right)^2} \, dx.
+\]
+
+\subsection*{Parte (c): Revolución alrededor de la línea \( y = -2 \)}
+
+Cuando la rotación es alrededor de \( y = -2 \), ajustamos la distancia al eje de rotación sumando 2 a \( y \). La fórmula de la superficie es:
+\[
+S = \int 2\pi (y + 2) \sqrt{1 + \left( \frac{dx}{dy} \right)^2} \, dy.
+\]
+
+Sustituimos:
+\[
+S = \int_{0}^{2} 2\pi (y + 2) \sqrt{1 + \left( \frac{y^2}{9} \right)^2} \, dy.
+\]

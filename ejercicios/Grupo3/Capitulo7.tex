@@ -1,0 +1,110 @@
+\chapter*{Capitulo 7 ABD Grupo 3}
+\section*{Ejercicio 33}
+
+Queremos resolver la integral:
+\[
+\int \frac{1}{x^3 - x} \, dx.
+\]
+
+\subsection*{Parte (a): Sustitución \( x = \sec\theta \)}
+
+Sea \( x = \sec\theta \), entonces:
+\[
+dx = \sec\theta \tan\theta \, d\theta.
+\]
+
+La expresión \( x^3 - x \) se transforma en:
+\[
+x^3 - x = \sec^3\theta - \sec\theta = \sec\theta (\sec^2\theta - 1) = \sec\theta \tan^2\theta.
+\]
+
+Sustituyendo todo en la integral:
+\[
+\int \frac{1}{x^3 - x} \, dx = \int \frac{\sec\theta \tan\theta \, d\theta}{\sec\theta \tan^2\theta} = \int \frac{1}{\tan\theta} \, d\theta = \int \cot\theta \, d\theta.
+\]
+
+La integral de \( \cot\theta \) es:
+\[
+\int \cot\theta \, d\theta = \ln|\sin\theta| + C.
+\]
+
+Regresamos a la variable \( x \):
+\[
+\sin\theta = \sqrt{\frac{x^2 - 1}{x^2}}, \quad \text{por lo tanto: } \ln|\sin\theta| = \ln\sqrt{\frac{x^2 - 1}{x^2}} = \frac{1}{2} \ln\left(\frac{x^2 - 1}{x^2}\right).
+\]
+
+Finalmente:
+\[\boxed{
+\int \frac{1}{x^3 - x} \, dx = \ln\sqrt{\frac{x^2 - 1}{x^2}} + C = \ln\frac{\sqrt{x^2 - 1}}{|x|} + C}
+\]
+
+Esta expresión es válida para \( |x| > 1 \).
+
+\subsection*{Parte (b): Sustitución \( x = \sin\theta \)}
+
+Sea \( x = \sin\theta \), entonces:
+\[
+dx = \cos\theta \, d\theta.
+\]
+
+La expresión \( x^3 - x \) se transforma en:
+\[
+x^3 - x = \sin^3\theta - \sin\theta = \sin\theta (\sin^2\theta - 1) = -\sin\theta \cos^2\theta.
+\]
+
+Sustituyendo todo en la integral:
+\[
+\int \frac{1}{x^3 - x} \, dx = \int \frac{\cos\theta \, d\theta}{-\sin\theta \cos^2\theta} = -\int \frac{1}{\sin\theta \cos\theta} \, d\theta = -\int \csc\theta \, d\theta.
+\]
+
+La integral de \( \csc\theta \) es:
+\[
+\int \csc\theta \, d\theta = \ln|\csc\theta - \cot\theta| + C.
+\]
+
+Regresamos a la variable \( x \):
+\[
+\csc\theta = \frac{1}{x}, \quad \cot\theta = \sqrt{\frac{1-x^2}{x^2}}, \quad \text{entonces:}
+\]
+\[
+\ln|\csc\theta - \cot\theta| = \ln\left|\frac{1}{x} - \sqrt{\frac{1-x^2}{x^2}}\right| = \ln\left|\frac{1 - \sqrt{1-x^2}}{x}\right|.
+\]
+
+Por lo tanto:
+\[\boxed{
+\int \frac{1}{x^3 - x} \, dx = \ln\left|\frac{1 - \sqrt{1-x^2}}{x}\right| + C}
+\]
+
+Esta expresión es válida para \( 0 < |x| < 1 \).
+
+\subsection*{Parte (c): Fracciones parciales}
+
+Factorizamos \( x^3 - x \):
+\[
+x^3 - x = x(x-1)(x+1).
+\]
+
+Escribimos la fracción como suma de fracciones parciales:
+\[
+\frac{1}{x^3 - x} = \frac{A}{x} + \frac{B}{x-1} + \frac{C}{x+1}.
+\]
+
+Resolviendo para \( A \), \( B \), y \( C \), obtenemos:
+\[
+\frac{1}{x^3 - x} = \frac{1}{x} - \frac{1}{2(x-1)} + \frac{1}{2(x+1)}.
+\]
+
+Entonces:
+\[
+\int \frac{1}{x^3 - x} \, dx = \int \frac{1}{x} \, dx - \frac{1}{2} \int \frac{1}{x-1} \, dx + \frac{1}{2} \int \frac{1}{x+1} \, dx.
+\]
+
+Resolvemos las integrales:
+\[
+\int \frac{1}{x} \, dx = \ln|x|, \quad \int \frac{1}{x-1} \, dx = \ln|x-1|, \quad \int \frac{1}{x+1} \, dx = \ln|x+1|.
+\]
+
+Por lo tanto:
+\[\boxed{
+\int \frac{1}{x^3 - x} \, dx = \ln|x| - \frac{1}{2} \ln|x-1| + \frac{1}{2} \ln|x+1| + C}
+\]
