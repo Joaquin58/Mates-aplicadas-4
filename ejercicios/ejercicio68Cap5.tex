@@ -1,0 +1,56 @@
+\chapter*{Ejercicio 68 Cápitulo 5 ABD }
+
+\textbf{68.-} Una partícula se mueve a lo largo del eje-s. Use la informaciónd dada para encontrar la función posición del la partícula: \\
+Información dada:
+\begin{align*}
+    a(t) &= 4cos(2t) \\
+    v(0) &= -1 \\
+    s(0) &= -3 \\
+\end{align*}
+Sabemos que al Integrar la Acelearción obtendremos la función de la velocidad de la partícula:
+\begin{align*}
+    v(t)&=\int a(t)dt \\
+    v(t)&=\int 4cos(2t)dt \\
+    v(t)&= 4\int cos(2t)dt \\
+    \text{Con:} \\
+    u   &= 2t \\
+    du  &= 2dt \\
+    v(t)&= 4\frac{1}{2}\int cos(2t)2dt \\
+    v(t)&= \frac{4}{2}\int cos(2t)2dt \\
+    v(t)&= 2sen(2t) + c\\
+\end{align*}
+Para hallar la constante de integración ($c$) y dar a $v(t)$, ocuparemos la evaluación que nos dieron de la velocidad en el tiempo $t=0$.
+\begin{align*}
+    v(0) = -1 &= 2sen(0) +c \\
+    -1 &= 2(0) + c \\
+    -1 &= c \\
+\end{align*}
+Así: 
+\[
+v(t) = 2sen(2t)-1
+\]
+Hacemos un proceso semejante para hallar la función posición $s(t)$.
+Sabemos que al integrar la velocidad, obtendremos la posición.
+\begin{align*}
+    s(t)&=\int v(t)dt \\
+    s(t)&=\int (2sen(2t) -1 )dt \\
+    s(t)&= \int 2sen(2t)dt - \int dt  \\
+    \text{Con:} \\
+    u   &= 2t \\
+    du  &= 2dt \\
+    s(t)&= \frac{2}{2}\int sen(2t)dt - t + c \\
+    s(t)&= -\frac{2}{2} cos(2t) - t + c \\
+    s(t)&= - cos(2t) - t + c \\
+\end{align*}
+Para hallar la $c$, seguimos un proceso semejante al anterior:
+\begin{align*}
+    s(0) = -3 &= - cos(2(0)) - (0) + c \\
+    -3 &= - cos(0)+ c  \\
+    -3 &=  - 1 +c \\
+    -3 +1 &= c \\
+    -2 &= c \\
+\end{align*}
+Así conseguimos la función posición $s(t)$ que buscabamos:
+\[
+s(t) = -cos(2t)-t-2
+\]

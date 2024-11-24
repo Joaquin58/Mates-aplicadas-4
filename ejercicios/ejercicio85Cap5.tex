@@ -1,0 +1,36 @@
+\chapter*{Ejercicio 85 Cápitulo 5 ABD }
+
+\textbf{85.-} Evalua la integral hacienodo una sustitución apropieada:
+\[
+\int_{0}^{1} sen^{2}(\pi x)cos(\pi x) dx
+\]
+Para la sustitución tomaremos a $u$ como:
+\[
+u = sen(\pi x)
+\]
+Así:
+\begin{align*}
+    \frac{du}{dx} &= \frac{d}{dx}sen(\pi x) \\
+    \frac{du}{dx} &= cos(\pi x) \pi \\
+    du &= \pi cos(\pi x)  dx \\
+\end{align*}
+
+Así podemos usar la Fórmula 2 del formulario autorizado:
+\[
+\int u^{n}du = \frac{u^{n+1}}{n+1} +c \\
+\]
+Con esto:
+\begin{align*}
+    \int u^{n}du &= \int_{0}^{1} sen^{2}(\pi x)cos(\pi x) dx \\
+    \int_{0}^{1} sen^{2}(\pi x)cos(\pi x) dx &= \frac{1}{\pi} \int_{0}^{1} sen^{2}(\pi x)\pi cos(\pi x) dx \\
+    \int_{0}^{1} sen^{2}(\pi x)cos(\pi x) dx &= \frac{1}{\pi} \int_{0}^{1} sen^{2}(\pi x)\pi cos(\pi x) dx \\
+    \int_{0}^{1} sen^{2}(\pi x)cos(\pi x) dx &= \frac{1}{\pi} \Bigl[\frac{sen^{3}(\pi x)}{3}\Bigr]_{0}^{1} \\
+    \int_{0}^{1} sen^{2}(\pi x)cos(\pi x) dx &= \frac{1}{\pi} \Bigl[\frac{sen^{3}(\pi (1)}{3} - \frac{sen^{3}(\pi (0)}{3}\Bigr]\\
+    \int_{0}^{1} sen^{2}(\pi x)cos(\pi x) dx &= \frac{1}{\pi} \Bigl[\frac{sen^{3}(\pi)}{3} - \frac{sen^{3}(0)}{3}\Bigr]\\
+    \int_{0}^{1} sen^{2}(\pi x)cos(\pi x) dx &= \frac{1}{\pi} \Bigl[\frac{0}{3} - \frac{0}{3}\Bigr]\\
+    \int_{0}^{1} sen^{2}(\pi x)cos(\pi x) dx &= \frac{1}{\pi} [0]\\
+\end{align*}
+Así el resultado de la integral es:
+\[
+\int_{0}^{1} sen^{2}(\pi x)cos(\pi x) dx = 0
+\]

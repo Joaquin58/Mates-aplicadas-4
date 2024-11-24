@@ -1,0 +1,59 @@
+\chapter*{Ejercicio 13 Cápitulo 6 ABD }
+
+\textbf{13.-} Encuentra la longitud del arco en el segundo cuadrante de la curva:
+\[
+x^{\frac{2}{3}} + y^{\frac{2}{3}} = 4
+\]
+De: $x = -8$ hasta $x=-1$. \\
+\newline
+Para esto, ocuparemos la fórmula:
+\[
+L = \int_{a}^{b} \sqrt{1+ [f'(x)]^{2}} dx
+\]
+Para tener la curva en Función de $x$, despejamos de la curva dada:
+\begin{align*}
+    x^{\frac{2}{3}} + y^{\frac{2}{3}} &= 4 \\
+    y^{\frac{2}{3}} &= 4 - x^{\frac{2}{3}} \\
+   (y^{\frac{2}{3}})^{\frac{3}{2}} &= (4 - x^{\frac{2}{3}})^{\frac{3}{2}} \\
+   y &= (4 - x^{\frac{2}{3}})^{\frac{3}{2}} \\ 
+\end{align*}
+Ahora, para evaluar la integral, necesitamos la 1er derivada de esta función de x 
+\begin{align*}
+    \frac{dy}{dx} &= \frac{d}{dx}(4 - x^{\frac{2}{3}})^{\frac{3}{2}} \\ 
+    y' &= \frac{3}{2}(4 - x^{\frac{2}{3}})^{\frac{3}{2}- \frac{2}{2}} \frac{d}{dx}(4 - x^{\frac{2}{3}}) \\
+    y' &= \frac{3}{2}(4 - x^{\frac{2}{3}})^{\frac{1}{2}} (-\frac{2}{3}x^{-\frac{1}{3}}) \\
+    y' &= -(4 - x^{\frac{2}{3}})^{\frac{1}{2}} (x^{-\frac{1}{3}}) \\
+     y' &= \frac{-(4 - x^{\frac{2}{3}})^{\frac{1}{2}}}{x^{\frac{1}{3}}} \\
+\end{align*}
+Ya que hemos derivado al función podemos evaluarla en la integral como se indica, resolveremos:
+\begin{align*}
+L = \int_{a}^{b} \sqrt{1+ [f'(x)]^{2}}dx =  \int_{-8}^{-1} \sqrt{1+ \Biggl[\frac{-(4 - x^{\frac{2}{3}})^{\frac{1}{2}}}{x^{\frac{1}{3}}}\Biggr]^{2}} dx
+\end{align*}
+Desarrollando:
+\begin{align*}
+    L &= \int_{-8}^{-1} \sqrt{1+ \Biggl[\frac{-(4 - x^{\frac{2}{3}})^{\frac{1}{2}}}{x^{\frac{1}{3}}}\Biggr]^{2}} dx \\
+    L &= \int_{-8}^{-1} \sqrt{1+ \Biggl[\frac{(-(4 - x^{\frac{2}{3}})^{\frac{1}{2}})^{2}}{(x^{\frac{1}{3}})^{2}}\Biggr]} dx \\
+    L &= \int_{-8}^{-1} \sqrt{1+ \frac{(4 - x^{\frac{2}{3}})^{\frac{2}{2}}}{x^{\frac{2}{3}}}} dx \\
+    L &= \int_{-8}^{-1} \sqrt{1+ \frac{4 - x^{\frac{2}{3}}}{x^{\frac{2}{3}}}} dx \\
+    L &= \int_{-8}^{-1} \sqrt{\frac{x^\frac{2}{3}+ 4 - x^{\frac{2}{3}}}{x^{\frac{2}{3}}}} dx \\
+    L &= \int_{-8}^{-1} \sqrt{\frac{4}{x^{\frac{2}{3}}}} dx \\
+    L &= \int_{-8}^{-1} \frac{\sqrt{4}}{\sqrt{x^{\frac{2}{3}}}} dx \\
+    L &= \int_{-8}^{-1} \frac{2}{({x^{\frac{2}{3}})^{\frac{1}{2}}}} dx \\
+    L &= \int_{-8}^{-1} \frac{2}{x^{\frac{1}{3}}} dx \\
+    L &= 2 \int_{-8}^{-1} \frac{1}{x^{\frac{1}{3}}} dx \\
+    L &= 2 \int_{-8}^{-1} x^{-\frac{1}{3}} dx \\
+    L &= 2 \int_{-8}^{-1} x^{-\frac{1}{3}} dx \\
+    L &= 2 \Biggl[ \frac{3x^{\frac{2}{3}}}{2} \Biggr]_{-8}^{-1} \\
+    L &= 2 \Biggl[ \frac{3(-8)^{\frac{2}{3}}}{2} - \frac{3(-1)^{\frac{2}{3}}}{2} \Biggr] \\
+    L &= 2 \Biggl[ \frac{3(2^{\frac{6}{3}})}{2} - \frac{3(1)}{2}  \Biggr] \\
+\end{align*}
+Continuación:
+\begin{align*}
+    L &= 2 \Biggl[ \frac{3(2^{\frac{6}{3}})}{2} - \frac{3(1)}{2}  \Biggr] \\
+    L &= 2 \Biggl[ \frac{3(2^{2})}{2} - \frac{3}{2}  \Biggr] \\
+    L &= 2 \Biggl[ \frac{3(4)}{2} - \frac{3}{2}  \Biggr] \\
+    L &= 2 \Biggl[ \frac{12}{2} - \frac{3}{2}  \Biggr] \\
+    L &= 2 \Biggl[ \frac{12 -3}{2}   \Biggr] \\
+    L &= 2 \Biggl[ \frac{9}{2}   \Biggr] \\
+    L &= 9 \text{ unidades}
+\end{align*}

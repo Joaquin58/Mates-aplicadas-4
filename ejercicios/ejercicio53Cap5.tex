@@ -1,0 +1,34 @@
+\chapter*{Ejercicio 53 Cápitulo 5 ABD }
+
+\textbf{53.-} Usa la parte 2 del Teorema Fundamental del Calculo y (donde sea necesario) la Fórmula 18 de la Sección 5.10 para encontrar las derivadas: \\
+\newline
+Recordando:\\
+2da Parte del Teorema Fundamental del Calculo en el ABD:
+\[
+\frac{d}{dx}\Bigl[\int_{a}^{b}f(t)dt \Bigr] = f(x)
+\]
+Fórmula 18 Sección 5.10 ABD:
+\[
+\frac{d}{dx}\Bigl[\int_{a}^{g(x)}f(t)dt \Bigr] = f(g(x))g'(x)
+\]
+Para el caso de este ejercicio (53) haremos uso de la fórmula 18:
+\[
+\frac{d}{dx}\Bigl[\int_{2}^{sen(x)}\frac{1}{1+t^{3}}dt \Bigr] 
+\]
+Con:
+\begin{align*}
+    g(x) &= sen (x) \\
+    g'(x) &= cos (x) \\
+\end{align*}
+Así:
+\[
+f(g(x)) = \frac{1}{1+sen^{3}(x)}
+\]
+Por lo tanto:
+\[
+f(g(x))g'(x) = \frac{1}{1+sen^{3}(x)}(cos (x))
+\]
+El resultado es:
+\[
+\frac{d}{dx}\Bigl[\int_{2}^{sen(x)}\frac{1}{1+t^{3}}dt \Bigr] = \frac{cos(x)}{1+sen^{3}(x)}
+\]

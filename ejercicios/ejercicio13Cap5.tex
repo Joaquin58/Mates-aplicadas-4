@@ -1,0 +1,60 @@
+\chapter*{Ejercicio 13 Cápitulo 5 ABD }
+
+\textbf{13.-} Evalua la integral:
+\[
+\int \frac{x}{(x^{2}-1)\sqrt{x^{4}-2x^{2}}}dx
+\]
+Haciendo la sustitución de:
+\[
+u = x^{2}-1
+\]
+Así:
+\begin{align*}
+\frac{du}{dx} &= \frac{d}{dx}x^{2}-1 \\
+\frac{du}{dx} &= 2x \\
+du &= 2xdx  
+\end{align*}
+\newline
+Para resolver esta integral, completaremos el T.C.P. (Trinomio Cuadrado Perfecto) que se encuentra adentro de la raíz de esta forma:
+\begin{align*}
+x^{4}-2x^{2} &= x^{4}-2x^{2} + 1 -1 \\
+x^{4}-2x^{2} &= (x^{4}-2x^{2} + 1) -1 \\
+x^{4}-2x^{2} &= (x^{2}-1)^{2}-1 \\
+\end{align*}
+Así nuestra integral resulta:
+\[
+\int \frac{x}{(x^{2}-1)\sqrt{(x^{2}-1)^{2}-1}}dx
+\]
+Ahora, podemos hacer uso de la Fórmula de 18 (Del formulario auorizado):
+\[
+\int \frac{du}{u\sqrt{u^{2}-a^{2}}} = \frac{1}{a}arcsec\frac{u}{a} + c
+\]
+Usando:
+\begin{multicols}{2}
+	\noindent
+	\begin{align*}
+		u^{2} &= (x^{2}-1)^{2} \\
+        u  &= (x^{2}-1) \\
+        du &= 2xdx \\
+	\end{align*}
+	\columnbreak
+	\begin{align*}
+		a^{2} &= 1 \\
+        a &= 1 \\
+	\end{align*}
+\end{multicols}
+
+De esta forma:
+\begin{align*}
+\int \frac{du}{u\sqrt{u^{2}-a^{2}}} &=   \int \frac{x}{(x^{2}-1)\sqrt{(x^{2}-1)^{2}-1}}dx \\
+\int \frac{du}{u\sqrt{u^{2}-a^{2}}} &=   \frac{1}{2}\int \frac{2xdx}{(x^{2}-1)\sqrt{(x^{2}-1)^{2}-1}} \\
+\end{align*}
+Tenemos:
+\begin{align*}
+\frac{1}{a}arcsec\frac{u}{a} + c &=   \frac{1}{2}[\frac{1}{1}arcsec(\frac{x^{2}-1}{1}) + c] \\
+\frac{1}{a}arcsec\frac{u}{a} + c &=   \frac{1}{2}arcsec (x^{2}-1) + c \\
+\end{align*}
+Resultado:
+\[
+\int \frac{x}{(x^{2}-1)\sqrt{x^{4}-2x^{2}}}dx = \frac{1}{2}arcsec (x^{2}-1) + c
+\]
