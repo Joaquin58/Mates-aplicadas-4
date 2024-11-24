@@ -1,0 +1,46 @@
+\chapter*{Problema planteado por el maestro}
+
+
+Se perfora una esfera de metal de radio R > 6 mm haciéndole un "túnel" cilíndrico de 6 mm de largo que pasa por el centro de la esfera y que deja un sólido con forma de "anillo".
+Mostrar que el volumen del sólido no depende de R y que es igual a 36Pi mm^3:
+
+\[
+f(3) = \sqrt{R^2 - x^2} \Big|_{x=3} = \sqrt{R^2 - 3^2} = \sqrt{R^2 - 9}
+\]
+
+\[
+2 \cdot 2\pi \int_{f(3)}^{R} x \sqrt{R^2 - x^2} \, dx
+\]
+
+\[
+= 4\pi \int_{9}^{0} -\frac{1}{2} \sqrt{u} \, du = -2\pi \int_{9}^{0} \sqrt{u} \, du
+\]
+
+\[
+\text{Sustituyendo: } 
+\quad u = R^2 - x^2, \quad du = -2x \, dx, \quad x \, dx = -\frac{1}{2} du
+\]
+
+\[
+u(f(3)) = u(\sqrt{R^2 - 9}) = R^2 - (R^2 - 9) = 9
+\]
+
+\[
+u(R) = R^2 - R^2 = 0
+\]
+
+\[
+-2\pi \int_{9}^{0} \sqrt{u} \, du = 2\pi \int_{0}^{9} \sqrt{u} \, du
+\]
+
+\[
+2\pi \int_{0}^{9} u^{1/2} \, du = 2\pi \left[ \frac{2u^{3/2}}{3} \right]_0^9
+\]
+
+\[
+= 2\pi \left( \frac{2(9)^{3/2}}{3} - \frac{2(0)^{3/2}}{3} \right)
+\]
+
+\[
+= \frac{4\pi \cdot 9^{3/2}}{3} = \frac{4}{3}\pi (27) = 9 \cdot 4\pi = 36\pi
+\]
