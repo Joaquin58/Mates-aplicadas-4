@@ -1,0 +1,74 @@
+\chapter*{Ejercicio 64 Cápitulo 5 ABD}
+\textbf{Encontrar el valor promedio de \( f(x) = e^x + e^{-x} \) en el intervalo \([ \ln \frac{1}{2}, \ln 2 ]\).}
+
+El valor promedio de una función está dado por:
+\[
+f_{\text{promedio}} = \frac{1}{b-a} \int_{a}^{b} f(x) \, dx
+\]
+En este caso, \( f(x) = e^x + e^{-x} \), \( a = \ln \frac{1}{2} \) y \( b = \ln 2 \).
+
+\subsection*{Planteamiento}
+Sustituimos en la fórmula:
+\[
+f_{\text{promedio}} = \frac{1}{\ln 2 - \ln \frac{1}{2}} \int_{\ln \frac{1}{2}}^{\ln 2} (e^x + e^{-x}) \, dx
+\]
+
+\subsection*{Simplificar los límites del denominador}
+Sabemos que:
+\[
+\ln 2 - \ln \frac{1}{2} = \ln 2 - \ln 2^{-1} = \ln 2 + \ln 2 = 2 \ln 2
+\]
+Por lo tanto:
+\[
+f_{\text{promedio}} = \frac{1}{2 \ln 2} \int_{\ln \frac{1}{2}}^{\ln 2} (e^x + e^{-x}) \, dx
+\]
+
+\subsection*{Calcular la integral indefinida}
+\[
+\int (e^x + e^{-x}) \, dx = \int e^x \, dx + \int e^{-x} \, dx
+\]
+Resolviendo cada término:
+\[
+\int e^x \, dx = e^x, \quad \int e^{-x} \, dx = -e^{-x}
+\]
+Por lo tanto:
+\[
+\int (e^x + e^{-x}) \, dx = e^x - e^{-x} + C
+\]
+
+\subsection*{Evaluar la integral definida}
+Sustituimos los límites:
+\[
+\int_{\ln \frac{1}{2}}^{\ln 2} (e^x + e^{-x}) \, dx = \left[ e^x - e^{-x} \right]_{\ln \frac{1}{2}}^{\ln 2}
+\]
+
+\subsection*{Sustituir los límites en la función}
+Evaluamos:
+\[
+\left[ e^x - e^{-x} \right]_{\ln \frac{1}{2}}^{\ln 2} = \left( e^{\ln 2} - e^{-\ln 2} \right) - \left( e^{\ln \frac{1}{2}} - e^{-\ln \frac{1}{2}} \right)
+\]
+Simplificamos:
+\[
+e^{\ln 2} = 2, \quad e^{-\ln 2} = \frac{1}{2}, \quad e^{\ln \frac{1}{2}} = \frac{1}{2}, \quad e^{-\ln \frac{1}{2}} = 2
+\]
+Por lo tanto:
+\[
+\left( e^{\ln 2} - e^{-\ln 2} \right) - \left( e^{\ln \frac{1}{2}} - e^{-\ln \frac{1}{2}} \right) = \left( 2 - \frac{1}{2} \right) - \left( \frac{1}{2} - 2 \right)
+\]
+Simplificamos:
+\[
+\left( 2 - \frac{1}{2} \right) - \left( \frac{1}{2} - 2 \right) = \frac{3}{2} + \frac{3}{2} = 3
+\]
+
+\subsection*{Calcular el valor promedio}
+Sustituimos en la fórmula del promedio:
+\[
+f_{\text{promedio}} = \frac{1}{2 \ln 2} \cdot 3 = \frac{3}{2 \ln 2}
+\]
+
+\subsection*{Resultado final}
+El valor promedio es:
+\[
+\boxed{\frac{3}{2 \ln 2}}
+\]
+ \newpage 
