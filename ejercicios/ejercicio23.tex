@@ -1,0 +1,104 @@
+\chapter*{23. Utiliza una herramienta de calculo para encontrar las aproximaciones las aproximaciones del área bajo la curva $y=f(x)$ en el intervalo indicado usando $n=10$ subintervalos, utilizando los puntos extremos izquierdo, derecho y el punto medio.}
+Sea $y=f(x)=ln \;x,[1,2]$
+
+\sectionfont{\fontsize{11}{15}\selectfont}
+\indent \section*{23.1 Aproximación por el extremo izquierdo}
+Sabemos que el area definida en los puntos extremos está dada por la suma de sus particiones descritas como:
+\[\sum_{i=1}^{n}f(x^*_i)\Delta x=\Delta x\sum_{i=1}^{n}f(x^*_i)\]
+donde $\Delta x = \frac{(b-a)}{n}$ y $x_i^*=x_{i-1}=a+(i-1)\Delta x$
+\begin{align*}
+	A\approx\sum_{i=1}^{10}ln(x_i^*)\Delta x & = \Delta x \sum_{i=1}^{10}ln(a+(i-1)\Delta x) \\
+	                                         & =\Delta x \sum_{i=1}^{10}ln(1+(i-1)0.1)
+\end{align*}
+\begin{table}[!hbt]
+	\begin{center}
+		\begin{tabular}{| c | c | c | c | }
+			\hline
+			\multicolumn{4}{ |c| }{$n=10,\;\Delta x =\frac{2-1}{10}=0.1$}       \\ \hline
+			i  & $i\cdot \Delta x $ & $x_i=1+i\cdot\Delta x$ & $f(x_{i})$       \\ \hline
+			1  & 0.1                & 1.1                    & 0                \\
+			2  & 0.2                & 1.2                    & 0.09531018       \\
+			3  & 0.3                & 1.3                    & 0.182321557      \\
+			4  & 0.4                & 1.4                    & 0.262364264      \\
+			5  & 0.5                & 1.5                    & 0.336472237      \\
+			6  & 0.6                & 1.6                    & 0.405465108      \\
+			7  & 0.7                & 1.7                    & 0.470003629      \\
+			8  & 0.8                & 1.8                    & 0.530628251      \\
+			9  & 0.9                & 1.9                    & 0.587786665      \\
+			10 & 1                  & 2                      & 0.641853886      \\ \hline
+			\multicolumn{4}{ |r| } {suma $ = 3.512205777\;$}                    \\
+			\multicolumn{4}{|r|}{$A\approx \Delta x \sum_{i=1}^n= 0.351220578$} \\ \hline
+		\end{tabular}
+		\caption{Metodo de Aproximación por el extremo izquierdo $x_i$}
+		\label{tab: tabla por el extremo derecho}
+	\end{center}
+\end{table}
+
+$\therefore$ El área resultante con este método es $0.351220578$ unidades de area.
+\newpage \indent \section*{23.2 Aproximación por el extremo derecho}
+\[\sum_{i=1}^{n}f(x^*_i)\Delta x=\Delta x\sum_{i=1}^{n}f(x^*_i)\]
+donde $\Delta x = \frac{(b-a)}{n}$ y $x_i^*=a+i\Delta x$
+\begin{align*}
+	A\approx\sum_{i=1}^{10}ln(x^*_i)\Delta x & = \Delta x\sum_{i=1}^{10}ln(a+i*\Delta x) \\
+	                                         & =\Delta x\sum_{i=1}^{10}ln(1+i*0.1)
+\end{align*}
+
+\begin{table}[!hbt]
+	\begin{center}
+		\begin{tabular}{| c | c | c | c | }
+			\hline
+			\multicolumn{4}{ |c| }{$n=10,\;\Delta x =\frac{2-1}{10}=0.1$}          \\ \hline
+			i  & $(i-1)\cdot \Delta x $ & $x_i=1+(i-1)\cdot\Delta x$ & $f(x_{i})$  \\ \hline
+			1  & 0                      & 1                          & 0.09531018  \\
+			2  & 0.1                    & 1.1                        & 0.182321557 \\
+			3  & 0.2                    & 1.2                        & 0.262364264 \\
+			4  & 0.3                    & 1.3                        & 0.336472237 \\
+			5  & 0.4                    & 1.4                        & 0.405465108 \\
+			6  & 0.5                    & 1.5                        & 0.470003629 \\
+			7  & 0.6                    & 1.6                        & 0.530628251 \\
+			8  & 0.7                    & 1.7                        & 0.587786665 \\
+			9  & 0.8                    & 1.8                        & 0.641853886 \\
+			10 & 0.9                    & 1.9                        & 0.693147181 \\ \hline
+			\multicolumn{4}{ |r| } {suma $ = 4.205352958\;$}                       \\
+			\multicolumn{4}{|r|}{$A\approx \Delta x \sum_{i=1}^n= 0.420535296$}    \\ \hline
+		\end{tabular}
+		\caption{Metodo de Aproximación por el extremo derecho $x_i$}
+		\label{tab:Area por el extremo izq}
+	\end{center}
+\end{table}
+
+$\therefore$ El área resultante con este método es $0.420535296$ unidades de area.
+
+\newpage \indent \section*{23.3 Aproximación por punto medio}
+\[\sum_{i=1}^{n}f(x^*_i)\Delta x=\Delta x\sum_{i=1}^{n}f(x^*_i)\]
+donde $\Delta x = \frac{(b-a)}{n}$ y $x_i^*=a+(i-\frac{1}{2})\Delta x$
+\begin{align*}
+	A\approx\sum_{i=1}^{10}ln(x^*_i)\Delta x & = \Delta x\sum_{i=1}^{10}ln(a+(i-\frac{1}{2})\Delta x) \\
+	                                         & =\Delta x\sum_{i=1}^{10}ln(1+(i-\frac{1}{2})*0.1)
+\end{align*}
+
+\begin{table}[!hbt]
+	\begin{center}
+		\begin{tabular}{| c | c | c | c | }
+			\hline
+			\multicolumn{4}{ |c| }{$n=10,\;\Delta x =\frac{2-1}{10}=0.1$}                             \\ \hline
+			i  & $(i-\frac{1}{2})\cdot \Delta x $ & $x_i=1+(i-\frac{1}{2})\cdot\Delta x$ & $f(x_{i})$  \\ \hline
+			1  & 0.05                             & 1.05                                & 0.048790164 \\
+			2  & 0.15                             & 1.15                                & 0.139761942 \\
+			3  & 0.25                             & 1.25                                & 0.223143551 \\
+			4  & 0.35                             & 1.35                                & 0.300104592 \\
+			5  & 0.45                             & 1.45                                & 0.371563556 \\
+			6  & 0.55                             & 1.55                                & 0.438254931 \\
+			7  & 0.65                             & 1.65                                & 0.500775288 \\
+			8  & 0.75                             & 1.75                                & 0.559615788 \\
+			9  & 0.85                             & 1.85                                & 0.615185639 \\
+			10 & 0.95                             & 1.95                                & 0.667829373 \\ \hline
+			\multicolumn{4}{ |r| } {suma $ = 3.865024825\;$}                                          \\
+			\multicolumn{4}{|r|}{$A\approx \Delta x \sum_{i=1}^n= 0.386502483$}                       \\ \hline
+		\end{tabular}
+		\caption{Metodo de Aproximación por el punto medio $x_i$}
+		\label{tab:Area por el punto medio}
+	\end{center}
+\end{table}
+
+$\therefore$ El área resultante con este método es $0.386502483$ unidades de area.
