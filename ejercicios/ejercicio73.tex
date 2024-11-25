@@ -1,0 +1,46 @@
+\chapter*{73. Una partícula se mueve con una velocidad de $v(t)\frac{m}{s}$ a lo largo de un eje s. Halla el desplazamiento y la distancia recorrida por la partícula en el intervalo de un tiempo dado.}
+
+Sabemos que la velocidad es la derivada de la posición.
+Calcularemos la diferecia de las posiciones para tener el desplazamiento total.
+Sea $v(t)=\displaystyle\frac{1}{2}-\frac{1}{t^2},1\leq t \leq 3 $
+\begin{align*}
+	x(3)-x(1)=\int_{1}^{3}v(t)dt & =\int_{1}^{3}\big(\frac{1}{2}-\frac{1}{t^2}\big)dt      \\
+	                             & =\int_{1}^{3}\frac{1}{2}dt -\int_{1}^{3}\frac{1}{t^2}dt \\
+	                             & =\frac{1}{2}t\bigg|_1^3-\int_{1}^{3}t^{-2}dt            \\
+	                             & =\frac{1}{2}t\bigg|_1^3+t^{-1}\bigg|_{1}^{3}            \\
+	                             & =\frac{1}{2}t\bigg|_1^3+\frac{1}{t}\bigg|_{1}^{3}       \\
+	                             & =\frac{1}{2}t\bigg|_1^3+\frac{1}{t}\bigg|_{1}^{3}       \\
+	                             & =\frac{3}{2}-\frac{1}{2}+\frac{1}{3}-1                  \\
+	                             & =\frac{1}{3}\text{m. de desplazamiento}                 \\
+\end{align*}
+$\therefore$ el desplazamiento total es de  $\frac{1}{3}\text{m. de desplazamiento}$\\
+Ahora sabemos que la posición se describe como $x(t)=\frac{t}{2}+\frac{1}{t}$
+
+Podemos notar que el desplazamiento no siempre es en linea recta por lo que debemos preguntarnos: ¿Cuándo pasa que $v(t)=0$?
+\begin{align*}
+	v(t)=0\iff \frac{1}{2}-\frac{1}{t^2}=\iff \frac{1}{t^2} & =\frac{1}{2} \\
+	\frac{2}{t^2}                                           & = 1          \\
+	2                                                       & = t^2        \\
+	t^2                                                     & = 2          \\
+	t                                                       & =\sqrt{2}    \\
+\end{align*}
+Debemos evaluar t en los límites
+\begin{align*}
+	v(1)=\frac{1}{2}-1=-\frac{1}{2} \\
+	v(3)=\frac{1}{2}-\frac{1}{3^2}=\frac{1}{2}-\frac{1}{9}=\frac{9-2}{18}=\frac{7}{18}
+\end{align*}
+Como la partícula fue cambiando de dirección después de que se detuviera, para hallar la distancia recorrida, debemos sumar las áreas por debajo y por encima del eje.
+\begin{align*}
+	distancia                                                                                                                        & =\bigg|x(3)-x(1)\bigg|=\int_{1}^{3}\big|\big(v(t)\big)\big|dt                                                                                                                                                      \\
+	\therefore \int_{1}^{\sqrt{2}}\bigg|\frac{1}{2}-\frac{1}{t^2}\bigg|dt+\int_{\sqrt{2}}^{3}\bigg|\frac{1}{2}-\frac{1}{t^2}\bigg|dt & =\int_{1}^{\sqrt{2}}\frac{1}{t^2}-\frac{1}{2}dt+\int_{\sqrt{2}}^{3}\frac{1}{2}-\frac{1}{t^2}dt                                                                                                                     \\
+	                                                                                                                                 & =\biggl[\int_{1}^{\sqrt{2}}t^{-2}dt-\int_{1}^{\sqrt{2}}\frac{1}{2}dt\biggr]+\biggl[\int_{\sqrt{2}}^{3}\frac{1}{2}dt-\int_{\sqrt{2}}^{3}t^{-2}dt\biggr]                                                             \\
+	                                                                                                                                 & =\biggl[-\frac{1}{t}-\frac{t}{2}\biggr]\Bigg|_1^{\sqrt{2}}+\biggl[\frac{t}{2}-\frac{1}{t}\biggr]\Bigg|_{\sqrt{2}}^3                                                                                                \\
+	                                                                                                                                 & =\biggl[\Biggl(-\frac{1}{\sqrt{2}}-\frac{\sqrt{2}}{2}\Biggr)-\Biggl(-\frac{1}{1}-\frac{1}{2}\Biggr)\biggr]+\biggl[\Biggl(\frac{3}{2}-\frac{1}{3}\Biggr)-\Biggl(\frac{\sqrt{2}}{2}-\frac{1}{\sqrt{2}}\Biggr)\biggr] \\
+	                                                                                                                                 & =\biggl[-\frac{2\sqrt{2}}{2}+\frac{3}{2}\biggr]+\biggl[\frac{11}{6}-\frac{2\sqrt{2}}{2}\biggl]                                                                                                                     \\
+	                                                                                                                                 & =-\sqrt{2}+\frac{3}{2}+\frac{11}{6}-\sqrt{2}                                                                                                                                    \\
+	                                                                                                                                 & =\frac{3}{2}+\frac{11}{6}-2\sqrt{2}                                                                                                                                    \\
+	                                                                                                                                 & =\frac{18+22}{12}-2\sqrt{2}\\
+	                                                                                                                                 & =\frac{40}{12}-2\sqrt{2}\\
+	                                                                                                                                 & =\frac{10}{3}-2\sqrt{2}\\
+\end{align*}
+Se concluye entonces que la distancia total recorrida por la praticula es $\displaystyle\frac{10}{3}-2\sqrt{2}\simeq 0.50490\;m$

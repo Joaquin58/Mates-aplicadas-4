@@ -1,0 +1,34 @@
+\chapter*{capitulo 7 ejercicio 19}
+\textbf{Evaluar la integral $\displaystyle\int_{0}^{1}\frac{x^3}{\sqrt{x^2+1}}dx$}\\
+a) Usando integración por partes.\\
+$\displaystyle\frac{x^3}{\sqrt{x^2+1}}=x^3(x^2+1)^{-\frac{1}{2}}$
+$\therefore$ definimos las partes tales que
+$u=x^2,\;dv=x(x^2+1)^{-\frac{1}{2}}dx,\;du = 2xdx $
+\begin{align*}
+	v             & =\int x(x^2+1)^{-\frac{1}{2}}dx                 \\
+	              & u=x^2+1\; du=2xdx\implies xdx=\frac{1}{2}du     \\
+	v             & =\frac{1}{2}\int u^{-1/2}du                     \\
+	              & =\frac{1}{2}\frac{u^{1/2}}{\frac{1}{2}}=u^{1/2} \\
+	\therefore v= & (x^2+1)^{1/2}
+\end{align*}
+$\therefore$ Aplicando la formula de integración por partes tenemos que
+\begin{align*}
+	x^2\cdot \sqrt{x^2 +1}\bigg|^1_0-                                & 2\int_{0}^{1}(x^2 +1)^{1/2}xdx                                 \\
+	\text{definimos }u=x^2+1\; du=2xdx                               & \implies xdx=\frac{1}{2}du, u(0)=1\;u(1)=2                     \\
+	\implies x^2\cdot \sqrt{x^2 +1}\bigg|^1_0-\int_{1}^{2}u^{1/2}du= & x^2\cdot \sqrt{x^2 +1}\bigg|^1_0-\frac{u^{3/2}}{3/2}\bigg|_1^2 \\
+	=x^2\cdot \sqrt{x^2 +1}\bigg|^1_0-\frac{2}{3}u^{3/2}\bigg|_1^2=  & \sqrt{2}-\frac{2}{3}\bigg(2^{3/2}-1\bigg)                      \\
+	=\sqrt{2}-\frac{4\sqrt{2}}+2{3}                                  & =\frac{3\sqrt{2}}{3}-\frac{4\sqrt{2}+2}{3}                     \\
+	                                                                 & =\frac{3\sqrt{2}-4\sqrt{2}+2}{3}                               \\
+	                                                                 & =\frac{-\sqrt{2}+2}{3}
+\end{align*}
+
+b)Usando la sustitución $\displaystyle u=\sqrt{x^2+1}$
+
+$\implies u^2=x^2+1\therefore            x^2=u^2-1, 2xdx=2udu\implies  xdx=udu,   \;u(0)=1,\;u(2)=\sqrt{2}                                                                                    $
+\begin{align*}
+	\int_{0}^{1}\frac{x^3}{\sqrt{x^2+1}}dx & =\int_{0}^{1}\frac{x^2}{\sqrt{x^2+1}}xdx        & = & \quad \bigg(\frac{u^3}{3}-u\bigg)\bigg|_1^{\sqrt{2}}                              \\
+	                                       & =\int_{1}^{\sqrt{2}}\frac{u^2-1}{u}udu          & = & \quad \bigg(\frac{\sqrt{2}^3}{3}-\sqrt{2}\bigg)-\bigg(\frac{1}{3}-1\bigg)         \\
+	                                       & =\int_{1}^{\sqrt{2}}u^2-1du                     & = & \quad \bigg(\frac{2\sqrt{2}}{3}-\frac{3\sqrt{2}}{3}\bigg)+\bigg(\frac{2}{3}\bigg) \\
+	                                       & =\int_{1}^{\sqrt{2}}u^2du-\int_{1}^{\sqrt{2}}du & = & \quad \frac{2\sqrt{2}-3\sqrt{2}+2}{3}                                             \\
+	                                       & \quad  =\frac{-\sqrt{2}+2}{3}                                                                                                           \\
+\end{align*}

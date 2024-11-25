@@ -1,0 +1,91 @@
+\chapter*{capitulo 7 ejercicio 45}
+\textbf{Aproxima la integral utilizando (a) la aproximación del punto medio $M_{10}$, (b) la aproximación trapezoidal $T_{10}$ y (c) la aproximación de la regla de Simpson $S_{20}$. En cada caso, encuentra el valor exacto de la integral y aproxima el error absoluto. Expresa tus respuestas con al menos cuatro decimales.}
+
+Sea la integral $\displaystyle \int_{1}^{3}\frac{1}{\sqrt{x+1}}dx$\\
+Calculemos la integral
+\begin{align*}
+	\int_{1}^{3}\frac{1}{\sqrt{x+1}}dx & =\int_{1}^{3}(x+1)^{-1/2}dx                             \\
+	u=x+1, du=dx\implies,u(1)=2,u(3)=4 & \int_{2}^{4}u^{-1/2}du=\frac{u^{1/2}}{1/2}\bigg|_2^4    \\
+	                                   & =2u^{1/2}\bigg|_2^4=2\sqrt{4}-2\sqrt{2}\simeq 1.1715728
+\end{align*}
+1) Aproximación con el punto medio ($M_{10}$)
+\[\sum_{j=1}^{n}f(x^*_j)\Delta x=\Delta x\sum_{j=1}^{n}f(x^*_j)\]
+donde $\Delta x = \frac{(b-a)}{n}$ y $x_j^*=a+(j-\frac{1}{2})\Delta x$\\
+Definimos $\Delta x =\frac{3-1}{10}=\frac{1}{5}$ y $f(x)=\frac{1}{\sqrt{x+1}}$\\
+$\displaystyle \int_{1}^{3}\frac{1}{\sqrt{x+1}}dx\approx \Delta x\sum_{j=1}^{n}f(x_j^*)=\Delta x\sum_{j=1}^{n}\frac{1}{\sqrt{(1+(j-\frac{1}{2})\Delta x)+1}}$
+
+\begin{table}[!hbt]
+	\begin{center}
+		\begin{tabular}{| c | c | c | c | }
+			\hline
+			\multicolumn{4}{ |c| }{$n=10,\;\Delta x =\frac{1}{5}=0.2$}                                 \\ \hline
+			i  & $(j-\frac{1}{2})\cdot \Delta x $ & $x_j=1+(j-\frac{1}{2})\cdot\Delta x$ & $f(x_{j})$  \\ \hline
+			1  & 0.1                              & 1.1                                  & 0.690065559 \\
+			2  & 0.3                              & 1.3                                  & 0.659380473 \\
+			3  & 0.5                              & 1.5                                  & 0.632455532 \\
+			4  & 0.7                              & 1.7                                  & 0.608580619 \\
+			5  & 0.9                              & 1.9                                  & 0.58722022  \\
+			6  & 1.1                              & 2.1                                  & 0.567961834 \\
+			7  & 1.3                              & 2.3                                  & 0.550481883 \\
+			8  & 1.5                              & 2.5                                  & 0.534522484 \\
+			9  & 1.7                              & 2.7                                  & 0.519875245 \\
+			10 & 1.9                              & 2.9                                  & 0.506369684 \\ \hline
+			\multicolumn{4}{ |r| } {suma $ = 5.856913533\;$}                                           \\
+			\multicolumn{4}{|r|}{$A\approx \Delta x \sum_{j=1}^{10}= 1.171382707$}                     \\ \hline
+		\end{tabular}
+		\caption{Metodo de Aproximación por el método del punto medio }
+		\label{tab:Area por el método del punto medio}
+	\end{center}
+\end{table}
+$\therefore$ el área con esta aproximación es $\displaystyle A\approx \Delta x \sum_{j=1}^{10}= 1.171382707$
+
+$|EM | = | 4-2\sqrt{2} - M10 |= 1.171572875-1.171382707=0.000190169$
+\\
+2) Aproximación con el método trapezoidal ($T_{10}$)
+\[\sum_{j=1}^{n}A(T_j)\Delta x=\frac{\Delta x}{2}\biggl[f(x_0)+2\sum_{j=1}^{n-1}f(x_{j})+f(x_n)\biggr]\]
+donde $\Delta x = \frac{(b-a)}{n}=\frac{3-1}{10}=\frac{2}{10}=0.2$ y $x_j=a+j\Delta x$\\
+Definimos $f(0)=f(a),f(x_j)=\frac{1}{\sqrt{x_j+1}}, f(n-1)=f(x_{n-1})=\frac{1}{\sqrt{x_{n-1}+1}}, f(n)=f(x_{n})=\frac{1}{\sqrt{x_{n}+1}}$\\
+$\displaystyle \int_{1}^{3}\frac{1}{\sqrt{x+1}}dx\approx \frac{\Delta x}{2}\biggl[\frac{1}{\sqrt{a+1}}+2\sum_{j=1}^{n-1}\frac{1}{\sqrt{x_j+1}}+\frac{1}{\sqrt{x_n+1}}\biggr]$
+
+\begin{table}[!hbt]
+	\begin{center}
+		\begin{tabular}{| c | c | c | c | }
+			\hline
+			\multicolumn{4}{ |c| }{$n=10,\;\Delta x =\frac{1}{5}=0.2$}                              \\ \hline
+			i  & $x_j $ & $x_j=1+(j-\frac{1}{2})\cdot\Delta x$ & $f(x_{j})$                         \\ \hline
+			0  & 1      & 0.707106781                          & 0.707106781                        \\
+			1  & 1.2    & 0.674199862                          & 1.348399725                        \\
+			2  & 1.4    & 0.645497224                          & 1.290994449                        \\
+			3  & 1.6    & 0.620173673                          & 1.240347346                        \\
+			4  & 1.8    & 0.597614305                          & 1.195228609                        \\
+			5  & 2      & 0.577350269                          & 1.154700538                        \\
+			6  & 2.2    & 0.559016994                          & 1.118033989                        \\
+			7  & 2.4    & 0.542326145                          & 1.084652289                        \\
+			8  & 2.6    & 0.527046277                          & 1.054092553                        \\
+			9  & 2.8    & 0.512989176                          & 1.025978352                        \\
+			10 & 3      & 0.5                                  & 0.5                                \\ \hline
+			\multicolumn{4}{ |r| } {suma $ = 11.71953463\;$}                                        \\
+			\multicolumn{4}{|r|}{$A\approx \frac{\Delta x}{2} \sum_{j=1}^{10}A(T_j)= 1.1719583463$} \\ \hline
+		\end{tabular}
+		\caption{Metodo de Aproximación por el método del trapecio }
+		\label{tab:Area por el método del trapecio}
+	\end{center}
+\end{table}
+$\therefore$ el área con esta aproximación es $\displaystyle A\approx \Delta x \sum_{j=1}^{10}= 1.1719583463$
+
+$|EM | = | 4-2\sqrt{2} - T10 |= 1.171572875-1.1719583463=0.000380588$
+
+3) Aproximación con la regla de Simpson($S_{10}$)\\
+$\displaystyle\int_{a}^{b}v(t)dt\simeq \frac{b-a}{3n}\biggl[v(t_0)+4v(t_1)+2v(t_2)+\dotsc+2v(t_{2n-2})+4v(t_{2n-1})+v(t_{2n})\biggr]$
+
+Se sugiere que si combinamos dos veces la aproximación del punto medio con la aproximación trapezoidal, los errores se cancelan entre sí.
+Por lo tanto, la integral se puede aproximar como:
+\[ S_n = \frac{1}{3} (2M_k + T_k),n=2k \]
+Entonces, sustituyendo en la formula los resultados anteriormente dados
+$$
+S_{20}=\frac{1}{3} (2(1.171382707) + 1.1719583463) \\
+	=\frac{1}{3}(3.514718876)\\
+	=1.171572959$$
+$|EM | = | 4-2\sqrt{2} - S20 |= 1.171572875-1.171572959=-8.35151*10^{-08}$
+
+Como se puede observar, el error es casi nulo siendo un número muy pequeño.
