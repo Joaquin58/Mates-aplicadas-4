@@ -1,0 +1,67 @@
+\chapter*{Ejercicio 51 Cápitulo 7 ABD }
+
+\textbf{51.-} Encuentra el área encerrada entre el eje-x y la curva:
+\[
+y = \frac{ln(x)-1}{x^{2}}
+\]
+Para $x \geq e$.\\
+\newline
+Esto quiere decir que encontraremos el área dada por la Integral:
+\[
+A = \int_{e}^{\infty} \frac{ln(x)-1}{x^{2}} \, dx
+\]
+Para hacer el calculo de esta integral que es infinita en su límite superior de la integral, haremos uso de un límite:\\
+Así el área esta dad por:
+\[
+A = \lim_{k \rightarrow \infty}\int_{e}^{k} \frac{ln(x)-1}{x^{2}} \, dx
+\]
+Usaremos también el método de Integración por Partes:
+\[
+\int u \, dv = uv - \int v \, du 
+\]
+Con:
+\begin{multicols}{2}
+	\noindent
+	\begin{align*}
+		u &= ln(x)-1  \\
+        du &= \frac{1}{x}dx \\
+	\end{align*}
+	\columnbreak
+	\begin{align*}
+	    dv &= \frac{1}{x^{2}}dx \\
+        \int \, dv &= \int x^{-2} \,dx \\
+        v &= -\frac{1}{x}
+	\end{align*}
+\end{multicols}
+Así, reemplazando tenemos que:
+\[
+    \lim_{k \rightarrow \infty}\int_{e}^{k} \frac{ln(x)-1}{x^{2}} \, dx  = (ln(x)-1)(\frac{-1}{x}) - \int(\frac{-1}{x})(\frac{1}{x}) \, dx
+\]
+Resilviendo sin aplicar el Límite:
+\begin{align*}
+    (ln(x)-1)(\frac{-1}{x}) - \int(\frac{-1}{x})(\frac{1}{x}) \, dx &= -(ln(x)-1)(\frac{1}{x}) + \int(\frac{1}{x})(\frac{1}{x}) \, dx \\
+    &= (ln(x)-1)(-\frac{1}{x}) + \int x^{-2}\, dx \\
+    &= (ln(x)-1)(-\frac{1}{x}) + \frac{x^{-1}}{-1} \\
+    &= (ln(x)-1)(-\frac{1}{x}) - \frac{1}{x} \\
+    &= (-\frac{1}{x})((ln(x)-1) +1) \\
+    &= (-\frac{1}{x})((ln(x)) \\
+    &= -\frac{ln(x)}{x} \\
+\end{align*}
+Evaluando:
+\begin{align*}
+    \lim_{k \rightarrow \infty} \Bigg[-\frac{ln(x)}{x} \Bigg]_{e}^{k} \\
+    \Bigg[ \lim_{k \rightarrow \infty} -\frac{ln(k)}{k} \Bigg] - \Bigg[-\frac{ln(e)}{e} \Bigg] \\
+    \Bigg[ \lim_{k \rightarrow \infty} -\frac{ln(k)}{k} \Bigg] - \Bigg[-\frac{ln(e)}{e} \Bigg] \\
+    \Bigg[ \lim_{k \rightarrow \infty} -\frac{ln(k)}{k} \Bigg] - \Bigg[-\frac{1}{e} \Bigg] \\
+\end{align*}
+El Límite $\Bigg[ \lim_{k \rightarrow \infty} -\frac{ln(k)}{k} \Bigg]$ tiende a 0, por lo tanto:
+\[
+[0] - \Bigg[-\frac{1}{e} \Bigg] \\
+\]
+\[
+0 + \frac{1}{e}
+\]
+Así el área encerrada entre el eje $x$ y la curva $y = \frac{ln(x)-1}{x^{2}}$ es: \\
+\[
+A = \frac{1}{e} \text{ unidades cuadradas}
+\]

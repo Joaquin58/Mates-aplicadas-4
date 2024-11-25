@@ -1,0 +1,93 @@
+\chapter*{Ejercicio 14 Cápitulo 7 ABD }
+
+\textbf{14.-} Una partícula que se mueve a lo largo del eje-x, tiene una función velocidad:
+\[
+v(t) = t^{3}e^{-t}
+\]
+Que tan lejos la partícula viaja desde el tiempo $t=0$ hasta $t=5$. \\
+Para encontrar lo que recorrío debemos resolver la integral de la función $v(t)$ en el intervalo dado:(D = Distancia)
+\[
+D = \int_{0}^{5} v(t) dt
+\]
+Es decir:
+\[
+D = \int_{0}^{5} t^{3}e^{-t}  dt
+\]
+Para resolver esta integral, lo haremos por Integración por Partes y haciendo uso de:
+\[
+\int u \, dv = uv - \int v \, du 
+\]
+Resolviendo:
+\[
+D = \int_{0}^{5} t^{3}e^{-t}  dt
+\]
+Con:
+\begin{multicols}{2}
+	\noindent
+	\begin{align*}
+		u &= t^{2}  \\
+        du &= 2tdt \\
+	\end{align*}
+	\columnbreak
+	\begin{align*}
+	    dv &= e^{-t}  dt \\
+        \int \, dv &= \int e^{-t}  \, dt \\
+        v &= -e^{-t}
+	\end{align*}
+\end{multicols}
+Sust en la Fórmula de Integración por Partes:
+\begin{align}
+    D = (t^{2})(-e^{-t}) - \int_{0}^{5} -e^{-t} 2t \,  dt 
+\end{align}
+\begin{align*}
+    D = (t^{2})(-e^{-t}) + 2\int_{0}^{5} e^{-t} t \,  dt \\
+\end{align*}
+Ahora, para resolver:
+\[
+\int_{0}^{5} e^{-t} t \,  dt
+\]
+Usaremos:
+\begin{multicols}{2}
+	\noindent
+	\begin{align*}
+		u&= t  \\
+        du &= dt \\
+	\end{align*}
+	\columnbreak
+	\begin{align*}
+	    dv &= e^{-t}  dt \\
+        \int \, dv &= \int e^{-t}  \, dt \\
+        v &= -e^{-t}
+	\end{align*}
+\end{multicols}
+Así:
+\begin{align*}
+    \int_{0}^{5} e^{-t} t \,  dt &= (t)(-e^{-t}) - \int-e^{-t} \, dt \\
+    \int_{0}^{5} e^{-t} t \,  dt &= (t)(-e^{-t}) + \int e^{-t} \, dt \\
+    \int_{0}^{5} e^{-t} t \,  dt &= (t)(-e^{-t}) - e^{-t}  \\
+    \int_{0}^{5} e^{-t} t \,  dt &= (e^{-t})(-t-1)  \\
+    \int_{0}^{5} e^{-t} t \,  dt &= (-e^{-t})(t+1)  \\
+\end{align*}
+Reemplazado de vuelta en (1):
+\begin{align*}
+    D = (t^{2})(-e^{-t}) +2 \int_{0}^{5} e^{-t} t \,  dt &= (t^{2})(e^{-t}) +2 [(-e^{-t})(t+1)] \Bigg]_{0}^{5}\\
+    D &= (t^{2})(-e^{-t}) +2 (-e^{-t})(t+1) \Bigg]_{0}^{5} \\
+    D &= (-e^{-t})[t^{2} + 2(t+1)]\Bigg]_{0}^{5} \\
+    D &= (-e^{-t})[t^{2} + 2t +2]\Bigg]_{0}^{5} \\
+    D &= (-e^{-t})[t^{2} + 2t +2]\Bigg]_{0}^{5} \\
+    D &= [(-e^{-(5)})[(5)^{2} + 2(5) +2]] - [(-e^{-(0)})[(0)^{2} + 2(0) +2]]\\
+    D &= [(-e^{-(5)})[25 + 10 +2]] - [(-e^{-(0)})[0 + 0 +2]]\\
+    D &= [(-e^{-(5)})[37]] - [(-e^{-(0)}[2]]\\
+    D &= [(-e^{-(5)})[37]] - [-\frac{1}{e^{0}}[2]]\\
+    D &= [(-e^{-(5)})[37]] - [-\frac{1}{1}[2]]\\
+    D &= -37e^{-(5)} - [-2]\\
+    D &= -37e^{-(5)} +2\\
+\end{align*}
+Así la partícula se movió:\\
+\[
+D = -37e^{-5} +2 \text{ unidades} 
+\]
+o
+\[
+D = - \frac{37}{e^{5}} +2 \text{ unidades} 
+\]
